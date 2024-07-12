@@ -12,7 +12,7 @@
 
 
 char* fileList[256];
-int fileCount = 0;
+int fileCount = 0;  
 int position = 0;
 int showHiddenFile = 0;
 
@@ -66,9 +66,9 @@ int main(int argc, char* argv[]) {
   while(key != 'q') {
     refresh();
     
-    if(MODE == "NORMAL") { normalMode(cwd, key); }
-    else if(MODE == "MINIMAL") { minimalMode(); }
-    else if(MODE == "FANCY") { fancyMode(); }
+    if((strcmp(MODE, "NORMAL") == 0)) { normalMode(cwd, key); }
+    //else if(strcmp(MODE, "MINIMAL")) { minimalMode(); }
+    // else if(strcmp(MODE, "FANCY")) { fancyMode(); }
 
 
     key = getch();
@@ -184,7 +184,6 @@ void normalMode(char* current_path, char key) {
 
   struct stat file_stat;
   if (stat(filename, &file_stat) == 0) {
-    double file_size_gb = (double)file_stat.st_size / (1024 * 1024 * 1024);
 
     char access_time[20];
     char modify_time[20];
@@ -226,7 +225,7 @@ void scanDir(char* arr[], int *count_var, char* dirname) {
   arr[0] = "..";
   while((entry = readdir(dir)) != NULL) {
     if(strcmp(entry->d_name, ".")  && strcmp(entry->d_name, "..")) {
-      if(entry->d_name[0] == '.' && showHiddenFile == 1 || entry->d_name[0] != '.') {
+      if((entry->d_name[0] == '.' && showHiddenFile == 1) || entry->d_name[0] != '.') {
         arr[x] = entry->d_name;
         *count_var = *count_var + 1;
         x++;
