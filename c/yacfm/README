@@ -1,0 +1,14 @@
+YACFM
+=====
+
+YACFM (Yet Another C File Manager) is a terminal-based file manager written in C,
+utilizing the ncurses library for user interface. It allows navigation, management,
+and previewing of files and directories directly from the terminal.
+
+== Compiling ==
+Compile with ncurses library:
+gcc yacfm.c -o yacfm -lncurses
+
+== Usage ==
+
+./yacfm --help
