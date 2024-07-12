@@ -10,5 +10,4 @@ Compile with ncurses library:
 gcc yacfm.c -o yacfm -lncurses
 
 == Usage ==
-
 ./yacfm --help
