@@ -7,7 +7,7 @@ and previewing of files and directories directly from the terminal.
 
 == Compiling ==
 Compile with ncurses library:
-gcc yacfm.c -o yacfm -lncurses
+gcc main.c -o yacfm -lncurses
 
 == Usage ==
 ./yacfm --help
