@@ -1,0 +1,12 @@
+painTUI
+=====
+
+painTUI (Yet Another C File Manager) is a simple terminal-based paint version written in C.
+
+== Compiling ==
+Compile with ncurses library:
+gcc main.c -o painTUI -lncurses
+
+== Usage ==
+./painTUI
+
