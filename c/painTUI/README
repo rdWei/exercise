@@ -10,3 +10,5 @@ gcc main.c -o painTUI -lncurses
 == Usage ==
 ./painTUI
 
+=== Updated code here ===
+https://github.com/rdWei/painTUI/settings
